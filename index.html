@@ -2,18 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cargando Simulador Biomédico...</title>
-    <style>body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador ECG - Proyecto STEM</title>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+        iframe { width: 100%; height: 100%; border: none; }
+    </style>
 </head>
 <body>
-    <iframe id="monitor" src="" style="width:100%; height:100%; border:none;"></iframe>
-
-    <script>
-        fetch('link.json?v=' + Date.now())
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('monitor').src = data.url;
-            });
-    </script>
+    <iframe src="TU_LINK_DE_BASE44_AQUI"></iframe>
 </body>
 </html>
