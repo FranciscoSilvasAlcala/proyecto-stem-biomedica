@@ -2,14 +2,18 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador ECG - Proyecto STEM</title>
-    <style>
-        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-        iframe { width: 100%; height: 100%; border: none; }
-    </style>
+    <title>Cargando Simulador Biomédico...</title>
+    <style>body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }</style>
 </head>
 <body>
-    <iframe src=https://biomedic-monitor.preview.emergentagent.com/></iframe>
+    <iframe id="monitor" src="" style="width:100%; height:100%; border:none;"></iframe>
+
+    <script>
+        fetch('link.json?v=' + Date.now())
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('monitor').src = data.url;
+            });
+    </script>
 </body>
 </html>
